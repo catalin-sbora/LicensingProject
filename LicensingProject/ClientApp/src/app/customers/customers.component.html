@@ -1,0 +1,7 @@
+<div *ngFor="let customer of customers | async; index as idx;" [ngClass]="idx%2==1 ? 'odd' : ''"  class="row table-row">
+    <div class="col-12 col-md-3">{{customer.name}}</div>
+    <div class="col-12 col-md-3">{{customer.address}}</div>
+    <div class="col-12 col-md-3">{{customer.phone}}</div>
+    <div class="col-12 col-md-3"> <button class="btn btn-primary" (click)="deleteCustomer(customer.id)" >Delete</button> </div>
+
+</div>
